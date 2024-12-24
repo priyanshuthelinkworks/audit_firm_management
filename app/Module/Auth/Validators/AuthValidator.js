@@ -70,7 +70,7 @@ class AuthValidator {
       };
 
       // Check for required properties
-      const requiredProperties = ['EMAIL', 'PASSWORD'];
+      const requiredProperties = ['email', 'password'];
       const missingProperties = requiredProperties.filter(prop => !(prop in data));
 
       if (missingProperties.length > 0) {

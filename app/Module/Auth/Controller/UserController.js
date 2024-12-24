@@ -34,7 +34,7 @@ class UserController  {
       const adminExists = await USRMST00.findOne({
         where: {
          
-            EMAIL: body.EMAIL ,
+            email: body.email ,
             
          
         },
@@ -45,10 +45,10 @@ class UserController  {
       }
 //ADMIN DOCUMENT CREATION
 
-req.body.PASSWORD = await bcrypt.hash(body.PASSWORD, 10);
+req.body.password = await bcrypt.hash(body.password, 10);
 req.body.STATUS =10100
 req.body.CATEGORY = "ADMINUSER"
-req.body.client=otpGenerator.generate(6, { upperCaseAlphabets: true, specialChars: true });
+req.body.audit_firm=otpGenerator.generate(6, { upperCaseAlphabets: true, specialChars: true });
 const data = await USRMST00.create(req.body);
      
       
@@ -89,8 +89,8 @@ const data = await USRMST00.create(req.body);
       //CHECK DATA
       let data = await USRMST00.findOne({
         where: {
-          EMAIL: body.EMAIL,
-          STATUS: 10100,
+          email: body.email,
+          status: 10100,
         },
         //attributes: ["USERID", "PASSWORD"]
       });
@@ -99,7 +99,7 @@ const data = await USRMST00.create(req.body);
       }
 
       //PASSWORD VALIDATION
-      const isValid = await bcrypt.compare(body.PASSWORD, data.PASSWORD);
+      const isValid = await bcrypt.compare(body.password, data.password);
       if (isValid) {
         let tokenData= {
           client:data.client,

@@ -15,10 +15,10 @@ const routes = {
         method: "post",
         route: "/user",
         action: "addUser",
-        middleware: [{
-          name:"Authorization",
-          params:[[Enum.ROLES.DEVELOPER]],
-        }],
+        // middleware: [{
+        //   name:"Authorization",
+        //   params:[[Enum.ROLES.DEVELOPER]],
+        // }],
       },
     ,
     {
