@@ -151,7 +151,7 @@ class Alert {
   static sendSlackMessage = async (message, slackid) => {
 
     try {
-      const token = 'xoxb-7676865936496-7640706705591-tPnlOaSyXXWXJmIq1AjmK9eK';
+      // const token = 'xoxb-7676865936496-7640706705591-tPnlOaSyXXWXJmIq1AjmK9eK';
 
       const web = new WebClient(token);
 
