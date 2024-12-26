@@ -113,7 +113,7 @@ class Alert {
 
 
 
-      const token = 'EAF6gSALQxcgBO0vlQgLPTz7St8oHutkAX004Naaqfiz2afsqrd7LLGRjh0kJItGUTCcj9bOGJ8mURoTiXJ8EC3PuTZCXXNeMQSuZCcl1SFZBdqgZBt1jlVFCmmbEoil3qFPt0sfc1OjmnzCHWQ4d6ZCW7hEOo7Vdr9qy3oYXsS3849H0vxb7wiPLLnmgTFHsd1suqJLPMnTMjdFtBz9mATKa8L8ael7Tmv8IZD'
+      const token = ''
       const response = await axios({
         method: 'post',
         url: `https://graph.facebook.com/v20.0/409724545558336/messages`, // Replace YOUR_PHONE_NUMBER_ID with your phone number ID
