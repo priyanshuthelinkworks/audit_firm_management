@@ -8,6 +8,13 @@ export  default[
     appendMiddleware:[]
   },
   {
+    name:"Upload_Doc",
+    type:"doc",
+    include:['model','coreRoutes'],
+    description:'Auth',
+    appendMiddleware:[]
+  },
+  {
     name: "Authorize",
     include: ["middleware"],
     description: "Secure route middleware",
